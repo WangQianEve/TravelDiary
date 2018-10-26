@@ -1,0 +1,6 @@
+.Mem {
+    display: flex;
+    flex-flow: row wrap;
+    overflow-x: auto;
+    flex-grow: 1;
+}

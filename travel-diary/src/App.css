@@ -1,0 +1,39 @@
+div {
+  border: 1px solid red;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  height: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.App-content {
+  flex-grow: 1;
+  display: flex;
+}
+
+.App-filter {
+  width: 200px;
+  flex-grow: 0;
+}
+
+.App-main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+#gallery-expand {
+  height: 30px;
+  flex-grow: 0;
+  align-self: flex-end;
+}

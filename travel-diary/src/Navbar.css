@@ -1,0 +1,9 @@
+.ActiveSection {
+    color: dodgerblue;
+}
+.Nav.is-current {
+    color: green;
+}
+.Nav {
+    color: grey;
+}
