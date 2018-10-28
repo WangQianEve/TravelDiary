@@ -4,6 +4,8 @@ import Memories from './Memories'
 import Guide from './Guide'
 import Map from './Map'
 import Navbar from './Navbar'
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +14,10 @@ class App extends Component {
           page: 1,
           place: 0,
           checked: ['foods', 'things', 'places'],
+          map_height: 0,
+          value: 0,
       };
+      this.options = ['all', 'barcelona', 'nice', 'eze', 'monaco', 'rome', 'vatican', 'athens', 'santorini'];
   }
 
     handleLabels = value => () => {
@@ -38,7 +43,12 @@ class App extends Component {
           return <Guide place={this.state.place}/>;
   }
 
-  handleMap = (id, e) => {
+  componentDidMount() {
+      const height = this.divElement.clientHeight;
+      this.setState({ map_height: height });
+  }
+
+    handleMap = (id, e) => {
       this.setState({place:id});
   };
 
@@ -46,10 +56,26 @@ class App extends Component {
       this.setState({page:id});
   };
 
+    handleChange = (value, e) => {
+        this.setState({ place: value });
+    };
+
   render() {
+      var buttons = [];
+      for(var i=0; i < this.options.length; i++)
+      {
+          if (this.state.place === i) {
+              buttons.push(<p id='selected' onClick={this.handleChange.bind(this, i)}>{this.options[i]}</p>);
+          } else {
+              buttons.push(<p onClick={this.handleChange.bind(this, i)}>{this.options[i]}</p>);
+          }
+      }
     return (
       <div className="App">
-        <div className="App-header">
+          <div id="mapNav">
+              {buttons}
+          </div>
+        <div className="App-header" ref={ (divElement) => this.divElement = divElement}>
           <Map place={this.state.place} handler={this.handleMap}/>
         </div>
         <div className="App-content">

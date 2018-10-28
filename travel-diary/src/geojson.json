@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+	{
+	  "type": "Feature",
+	  "geometry": {
+	    "type": "Point",
+	    "coordinates": [2,41]
+	  },
+	  "properties": {
+	    "name": "Barcelona",
+	    "days":4,
+        "text_offset":[0,0.8]
+	  }
+	},
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.3,43.7]
+      },
+      "properties": {
+        "name": "Nice, Eze & Monaco",
+        "days":4,
+        "text_offset":[0,0.8]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.48, 41.89]
+      },
+      "properties": {
+        "name": "Rome & Vatican",
+        "days":4,
+        "text_offset":[0,0.8]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.7,38]
+      },
+      "properties": {
+        "name": "Athens",
+        "days":4,
+        "text_offset":[-0.2,0.8]
+      }
+    },
+    {
+	  "type": "Feature",
+	  "geometry": {
+	    "type": "Point",
+	    "coordinates": [25,36]
+	  },
+	  "properties": {
+	    "name": "Santorini",
+	    "days":1,
+        "text_offset":[0,0.6]
+	  }
+	}
+  ]
+}

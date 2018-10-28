@@ -1,53 +1,82 @@
 import React, { Component } from 'react';
-// import ReactMapGL from 'react-map-gl';
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, GeoJSONLayer } from "react-mapbox-gl";
 import './App.css';
 import './Map.css';
-// import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
+import * as MapboxGL from 'mapbox-gl';
+
 var classNames = require('classnames');
 const TOKEN = 'pk.eyJ1IjoicWlhbi13YW5nIiwiYSI6ImNqZzF6eDk5MzE4dnAzM283bDFod2dtd3YifQ.02lGEEiPWoekKQabkgQlEg';
-// const { token, styles } = require('./config.json');
 const Mapbox = ReactMapboxGl({ accessToken: TOKEN });
-const mapStyle = {
-    width: '100%',
-    height: '100%'
+const geojson = require('./geojson.json');
+const circleLayout: MapboxGL.CircleLayout = { visibility: 'visible' };
+const circlePaint: MapboxGL.CirclePaint = {
+    'circle-color': 'white',
+    'circle-radius': {
+        property: 'days',
+        type: 'exponential',
+        stops: [
+            [1, 10],
+            [4, 20]
+        ]
+    },
+    'circle-opacity': 0.8
+};
+const symbolLayout: MapboxGL.SymbolLayout = {
+    'text-field': '{name}',
+    'text-font': ['Open Sans Semibold Italic', 'Arial Unicode MS Bold'],
+    'text-offset': [0,0.6],
+    'text-anchor': 'top'
+};
+const symbolPaint: MapboxGL.SymbolPaint = {
+    'text-color': 'white'
 };
 
-
 class Map extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            viewport: {
-                latitude: 37.7577,
-                longitude: -122.4376,
-                zoom: 8
-            }
-        };
-    }
-
-    handleStyleLoad = map => (map.resize())
-
     render() {
         var classes = classNames({
             'Map': true,
         });
+        var mgeojson = {
+            type: 'FeatureCollection',
+            features: []
+        }
+        if (-1===this.props.place) {
+            mgeojson = geojson;
+        } else {
+            for (var i=0; i < geojson.features.length; ++i) {
+                if (i===this.props.place) {
+                    mgeojson.features.push(geojson.features[i]);
+                    break;
+                }
+            }
+        }
         return (
             <Mapbox
-                style="mapbox://styles/mapbox/streets-v9"
+                className={classes}
+                style="mapbox://styles/mapbox/dark-v9"
                 containerStyle={{
                     height: "100%",
-                    width: "100%"
+                    width: "200%"
                 }}
-                onStyleLoad={this.handleStyleLoad}
+                zoom={[3.3]}
+                center={[50, 40]}
+                onStyleLoad={this.onStyleLoad}
+                // onClick={this._onClickMap}
             >
-                <Layer
-                    type="symbol"
-                    id="marker"
-                    layout={{ "icon-image": "marker-15" }}>
-                    <Feature coordinates={[-0.481747846041145, 51.3233379650232]}/>
-                </Layer>
+                <GeoJSONLayer
+                    data={mgeojson}
+                    circleLayout={circleLayout}
+                    circlePaint={circlePaint}
+                    circleOnClick={this.onClickCircle}
+                    symbolLayout={symbolLayout}
+                    symbolPaint={symbolPaint}
+                    // symbolOnClick={this.onClickCircle}
+                />
+                {/*<Layer*/}
+                    {/*type="symbol"*/}
+                    {/*id="marker"*/}
+                    {/*layout={{ "icon-image": "marker-15" }}>*/}
+                {/*</Layer>*/}
             </Mapbox>
             // {/*<ReactMapGL*/}
             //     {/*width={100}*/}
