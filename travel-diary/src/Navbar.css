@@ -1,9 +1,9 @@
 .ActiveSection {
     color: dodgerblue;
 }
-.Nav.is-current {
-    color: green;
-}
-.Nav {
+#nav a span{
     color: grey;
+}
+#nav a.is-current span {
+    color: black;
 }

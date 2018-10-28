@@ -28,42 +28,26 @@ class Guide extends Component {
     }
 
     render() {
+        console.log('place', this.props);
+        let intro = null;
+        if (this.props.place === 0) {
+            intro = (<p>Europe is a beautiful place, Europe is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful place</p>);
+        } else if (this.props.place === 1) {
+            intro = (<p>Barcelona is a beautiful place, Europe is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful place</p>);
+        }
         return (
             <div id='mainContent'>
                 <section id='section-1'>
-                <h3>Introduction1</h3>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
+                    <h3>Introduction1</h3>
+                    {intro}
                 </section>
                 <section id='section-2'>
-                <h3>Introduction2</h3>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
+                    <h3>Introduction2</h3>
+                    {intro}
                 </section>
                 <section id='section-3'>
-                <h3>Introduction3</h3>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
-                <p>Barcelona is a beautiful place</p>
+                    <h3>Introduction3</h3>
+                    {intro}
                 </section>
             </div>
         );
