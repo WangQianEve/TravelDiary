@@ -40,7 +40,8 @@
 #detail_img {
     flex-shrink: 1;
     display: flex;
-    overflow-x: auto;
+    justify-content: center;
+    /*overflow-x: auto;*/
 }
 
 #modal-card img{
