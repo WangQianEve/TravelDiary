@@ -12,10 +12,8 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-map-gl": "^3.3.8",
-    "react-mapbox-gl": "^4.0.0",
     "react-scripts": "2.0.5",
-    "react-scrollspy": "^3.3.5",
-    "semantic-ui-react": "^0.83.0"
+    "react-scrollspy": "^3.3.5"
   },
   "scripts": {
     "deploy" : "npm run build&&gh-pages -d build",
