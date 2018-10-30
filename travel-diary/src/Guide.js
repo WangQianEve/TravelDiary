@@ -1,54 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
+import './Guide.css';
+import summary from './summary.json';
 
 class Guide extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            option: 1,
-            label: ['true', null, 'true']
-        };
-        this.options = ['Memories', 'Travel Guide'];
-    }
-
-    renderLabels() {
-        if (this.state.option === 1) return null;
-        var elements = [];
-        var labels = ['foods', 'places', 'things'];
-        for(var i=0; i < labels.length; i++) {
-            elements.push(<p><input type="checkbox" checked={this.state.label[i]}/>{labels[i]}</p>)
-        }
-        return elements;
-    };
-
-    renderSectionView(index) {
-        var classname = "Section";
-        if (this.state.option === index) classname = 'ActiveSection';
-        return (<div className={classname}>{this.options[index]}</div>);
     }
 
     render() {
-        console.log('place', this.props);
-        let intro = null;
-        if (this.props.place === 0) {
-            intro = (<p>Europe is a beautiful place, Europe is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful place</p>);
-        } else if (this.props.place === 1) {
-            intro = (<p>Barcelona is a beautiful place, Europe is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful placeEurope is a beautiful place</p>);
+        var sections = ['Introduction', 'What we did', 'What we ate', 'Weather', 'Cost', 'Transportation', 'Other Tips'];
+        var section_names = ['introduction', 'things', 'foods', 'weather', 'cost', 'transportation', 'tips'];
+        var elements = [];
+        for (var i=0; i<sections.length; ++i) {
+            var current = summary[this.props.city];
+            elements.push(
+                <section id={'section-'+i}>
+                    <h3>{sections[i]}</h3>
+                    <div className='content'>
+                        {i===(sections.length-1)?current[section_names[i]].map(value => (<p>{value}</p>)):<p>{current[section_names[i]]}</p>}
+                    </div>
+                </section>
+            );
         }
         return (
-            <div id='mainContent'>
-                <section id='section-1'>
-                    <h3>Introduction1</h3>
-                    {intro}
-                </section>
-                <section id='section-2'>
-                    <h3>Introduction2</h3>
-                    {intro}
-                </section>
-                <section id='section-3'>
-                    <h3>Introduction3</h3>
-                    {intro}
-                </section>
+            <div className='Guide'>
+                {elements}
             </div>
         );
     }

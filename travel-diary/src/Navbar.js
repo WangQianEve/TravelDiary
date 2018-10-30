@@ -13,38 +13,42 @@ function ListItemLink(props) {
 
 class Navbar extends Component {
     render() {
+        var sections = ['Introduction', 'What we did', 'What we ate', 'Weather', 'Cost', 'Transportation', 'Other Tips'];
+        var section_names = [];
+        var elements = [];
+        for (var i=0; i<sections.length; ++i) {
+            elements.push(
+                <ListItemLink key={i} className='ListItemLink' href={"#section-"+i}>
+                    {sections[i]}
+                </ListItemLink>
+            );
+            section_names.push("section-"+i);
+        }
         return (
             <div>
                 <List component="nav" id='nav' >
-                    <ListItem button onClick={(e) => this.props.handler(0)}>
-                        <ListItemText inset primary="Summary" />
+                    <ListItem id={this.props.page===0? 'activeSection':'selection'} button onClick={(e) => this.props.handler(0)}>
+                        Summary
                     </ListItem>
                     { this.props.page === 0 ? (
-                        <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
-                            <ListItemLink href="#section-1">
-                                <ListItemText primary="Section 1" />
-                            </ListItemLink>
-                            <ListItemLink href="#section-2">
-                                <ListItemText primary="Section 2" />
-                            </ListItemLink>
-                            <ListItemLink href="#section-3">
-                                <ListItemText primary="Section 3" />
-                            </ListItemLink>
+                        <Scrollspy items={ section_names } currentClassName="is-current">
+                            {elements}
                         </Scrollspy>
                     ) : null}
-                    <ListItem button onClick={(e) => this.props.handler(1)}>
-                        <ListItemText inset primary="Memories" />
+                    <ListItem id={this.props.page===1? 'activeSection':'selection'} button onClick={(e) => this.props.handler(1)}>
+                        Memories
                     </ListItem>
                     { this.props.page === 1 ? (
                         <List component="div">
                             {['foods', 'things', 'places', 'personal'].map(value => (
-                                <ListItem key={value} role={undefined} dense button onClick={this.props.handleLabels(value)}>
+                                <ListItem className='ListItem' key={value} role={undefined} dense button onClick={this.props.handleLabels(value)}>
                                     <Checkbox
+                                        color='default'
                                         checked={this.props.checked.indexOf(value) !== -1}
                                         tabIndex={-1}
                                         disableRipple
                                     />
-                                    <ListItemText primary={value} />
+                                    {value}
                                 </ListItem>
                             ))}
                         </List>

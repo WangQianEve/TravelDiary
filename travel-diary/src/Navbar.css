@@ -1,9 +1,22 @@
-.ActiveSection {
-    color: dodgerblue;
+#activeSection {
+    color: black;
+    font-weight: bold;
+}
+#selection {
+    font-weight: bold;
+    color: grey;
 }
 #nav a span{
     color: grey;
 }
-#nav a.is-current span {
+a.ListItemLink.is-current{
     color: black;
+}
+a.ListItemLink{
+    font-size: 10pt;
+    color: grey;
+}
+.ListItem {
+    padding: 0 20px !important;
+    font-size: 10pt;
 }

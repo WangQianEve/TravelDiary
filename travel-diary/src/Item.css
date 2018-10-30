@@ -2,3 +2,9 @@
     height: 200px;
     width: auto;
 }
+.mem-item {
+    padding: 10px 5px;
+}
+.mem-title {
+    padding-bottom: 5px;
+}

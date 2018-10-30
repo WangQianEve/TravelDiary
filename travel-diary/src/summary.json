@@ -1,0 +1,83 @@
+{
+  "all": {
+    "introduction": "In summer 2018, Zecong and I travelled to 8 cities north to mediterranean for 2 weeks. The trip was full of sunshine, blue sea, ancient architechtures, wines and folk arts... Here we shared some of our photos in the 'Memory' section, and our tips in the 'Summary' section.",
+    "things": "We mainly enjoy the natural scenen and visited museums along the way. I love the ancient relics in athens, the sunset in santorini, the food in rome, the sea line in nice and architechtures in barcelona.",
+    "foods": "This area is full of wonderful wines, desserts, fruits. But in terms of dinners, I enjoy Italian food the most.",
+    "weather": "The weather across the eight cities are generally hot. We mostly wear our lightest clothes.",
+    "cost": "For each person, it's around 1200 euro on flights, 43 euro each day on accommodation(2 ppl 1 room), and 80 euro euro each day on foods and other stuff.",
+    "transportation": "We only used flights across cities. A tip could be 'Avoid early flights'! Because the price is really not that big deal when you ruined a whole day in a beautiful city because of a morning flight. And you may have to use taxi to get to the airport, which may also cost a lot.",
+    "tips": ["Use sunscreens and drink a lot of water! Zecong had a fever and I got some acne due to lack of water. So we never had a chance to swim in the Mediterranean, so regretful!"]
+  },
+  "athens": {
+    "introduction": "When I just arrived, the graffities really suprised me. But later I realize Athens is still the city full of ancient relics. People here are really nice. An old gentleman reminded me to zip my bag on the subway by gesture, so maybe it's not that safe? But nothing happened to me.",
+    "things": "We mainly visited the ancient relics, museums and we watched sunset at a park. It's fabulous.",
+    "foods": "Greek food is not my type, I guess it's because the type of cheese, pepper and other material they used is so unfamiliar to me.",
+    "weather": "It often rains suddenly, so it's quite humid.",
+    "cost": "Athens is the cheapest in our trip.",
+    "transportation": "Generally speaking, the city is small, and the relics are clustered. So it's very convinient for tourists.",
+    "tips": ["1. Go to the acroplis museum before the acropolis. That way you can learn more when visiting.","2. You can buy tickets online to avoid the SUPER LONG queue on acropolis. There're signs tell you the link, I guess it's because they are buying student/europe citizen ticket that they would stand in the line."]
+  },
+  "santorini": {
+    "introduction": "Santorini is definitely a MUST GO place in Greece. It's beautiful like heaven. It's so relaxing looking at the white and blues.",
+    "things": "We only stayed in Fira village because we slept over the whole afternoon...because of the early flight. But we enjoyed an extrodinary sunset at the hotel. I also bought some local skin care masks.",
+    "foods": "I eagered to have Chinese food that day, so I can only say the Chinese restaurant is pretty good. And the food from our hotel is also delicious (and expensive).",
+    "weather": "The wind is strong because it's by the sea, but still warm.",
+    "cost": "It's much more expensive than Athens, that stopped me buying things there. But actually it's not more expensive than other cities I visited later.",
+    "transportation": "It's a small place composed by several small villages. There's several buses that takes people across villages, trips are usually within 30 minutes. You can also rent a motorcycle with your license. But it's totally fine to walk in the narrow streets and enjoy the view.",
+    "tips": ["About sunset: You probably don't need to go the the recommended place. Because it says online there'd be a lot of people. We decided to enjoy the sunset in our hotel, and it turned out to be the most beautiful night we had through out the trip. We enjoyed the sunset lying on the chairs and in the private pool, with cocktails and fruits, with no others around!"]
+  },
+  "rome": {
+    "introduction": "The streets and buildings in Rome has a 'retro' style, there're lots of gorgeous buildings both from ancient times and from the renaissance or after. You can feel its once prosperity throught the street view. And ART is everywhere. Both in museums and on the street. As for people, you can see lots of international tourists here, and local people are kind and hospitable. Wines and foods are great!",
+    "things": "We visited several museums, the Colosseum, and Vatican city. The rest of the time we just rambled on the street. Generally speaking, the visitings takes less time than I expected. Probably because they're even more clustered than in Athens?",
+    "foods": "Wonderful! The restaurants are great, and the breakfast my landlord prepared for us is also great, the tiramisu are even better! The wines are also fabulous!",
+    "weather": "Hot as other cities north to mediterranean.",
+    "cost": "Medium level. ",
+    "transportation": "This is probably the only part I dislike this city. You can only buy a one-time ticket with cash at certain stops! And you don't even know where they are! It's so inconvinient. We spent almost an hour looking for where to buy a bus ticket, and we had to buy something else at the bookstore for change. And the buses are really casual. The one we took just suddenly decided to stop, so we have to walk the rest way OTL.",
+    "tips": ["Don't buy anything from the vendors on the street... They may gave you a flower for 'free', but ask for tips for taking a picture for you. They may have a top that makes sounds, while actually the sound is from themselves."]
+  },
+  "vatican": {
+    "introduction": "Vatican is the smallest country in the world. It feels like a region in the Rome city. The main part of the trip in Vatican is the museum. You can learn about all the religious arts in it. And the famous Sistine Chapel is also there. There's also a small collection of modern art from one of the popes. The view on top of the church is not as great as expected, because there's wires around protecting people.",
+    "things": "The museum takes more than half of a day. After visiting the museum, we came out and had a drink on Rome street, then went back to get on top of the church when there's less people.",
+    "foods": "Don't eat here. There's only one fastfood cantine in Vatican, and it's bad. But you can go out to Rome for food and then go back to continue your trip.",
+    "weather": "The same as Rome. It's really like a virtual country. It's just a religious place in Rome.",
+    "cost": "Only tickets? lol",
+    "transportation": "Only walking I guess lol.",
+    "tips": ["Remember to mail yourself a postcard~"]
+  },
+  "nice": {
+    "introduction": "Nice is a typical city of South France. Many people came for vacation on the golden sea line. Indeed, the view is so relaxing. And there're also art galleries, perfumes and wines...",
+    "things": "We visited a modern art gallery and Musee Matisse. The Matisse museum is a 'MUST GO' for me. All the museums are free for students.",
+    "foods": "Well it's not what I had expected for French cuisine... There's a famous local snack called socca, which is strange and salty to me. Other things I had also feels strange.",
+    "weather": "It's hot, use sunscreens.",
+    "cost": "It's cheaper than the big cities like Rome and Barcelona. Around 60 euro each person each day (b&b not included).",
+    "transportation": "The bus system is convinient. And there's helicopters at the airport.",
+    "tips": ["Bring you swimsuits! Find a house with air conditioner to live in!"]
+  },
+  "eze": {
+    "introduction": "This is a small village near Nice (30-minutes train trip). We didn't have much time there, so we just visited Fragnard Perfume Factory and bought some perfumes and soaps.",
+    "things": "Fragnard Perfume factory. There's multi-lingual tour guide in the factory.",
+    "foods": "It seems there's not much restaurant. I bought a crepes but it's not good.",
+    "weather": "Hot and summy, same as Nice.",
+    "cost": "It's cheap.",
+    "transportation": "You can drive here or use buses. I saw people lives in Nice, and works here.",
+    "tips": ["If I had second chance, I'll probably go on the mountain to enjoy the view."]
+  },
+  "monaco": {
+    "introduction": "Monaco is the second smallest country in the world. It's near Nice. The place is kind of on an mountain, so the view is quite pleasing. And it's like a perfect place for the rich to relax lol.",
+    "things": "There're a lot of expensive fashion shops, and nice restaurants, but we didn't go. We went to the biggest Casino, but couldn't get in because we didn't bring our IDs.",
+    "foods": "The snacks are simple and expensive.",
+    "weather": "It's warm and sunny.",
+    "cost": "Things are expensive, we only bought several postcards.",
+    "transportation": "We mostly use buses or walk.",
+    "tips": ["Remember to bring you ID to get in the casino. ", "You can mail yourself a postcard. It's the 2nd smallest country~"]
+  },
+  "barcelona": {
+    "introduction": "Barcelona is the capital of Catalonia, as well as the second most populous municipality of Spain. Both Spanish and Catalan are official language. To me, Barcelona is my favorite city of the whole trip. It's generally a modern city. They have delicious food and wine, wonderful art and archetectures, extrodinary natural scenes and fashion industry. A city full of passion.",
+    "things": "We stayed for 4 days, mainly visiting buildings Gaudi designed. We also watched a Flamingo performance. We spent a whole day at a small local amusement part -- Tibidabo. And we went to the famous market for snacks.",
+    "foods": "Foods are pretty good here. My second favorite in these cities. The sausages and tapas are special food here. And yes I strongly recommend seafood paella! The food in the market is not as good as those in the restaurants, but the fruit cups are super good and cheap.",
+    "weather": "Sit right beside the mediterranean, the weather is quite xxx. It’s great to travel there any time of the year. I went there in August. Wearing my lightest summer suits. ",
+    "cost": "The cost is the second highest among the citis we visited. ",
+    "transportation": "We mainly use metros, they have a 10.2 euro 10 times ticket called T10 card (single trip ticket is 2.5 euro). You can also use it to ride buses. We also used taxis, the drivers were wild, but very hospitable.",
+    "tips": ["Try to stay here for longer! This city is amazing."]
+  }
+}
