@@ -3,7 +3,8 @@
     width: auto;
 }
 .mem-item {
-    padding: 10px 5px;
+    cursor: pointer;
+    margin: 10px 5px;
 }
 .mem-title {
     padding-bottom: 5px;
